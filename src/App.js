@@ -6,7 +6,11 @@ function App() {
       <h1> Weather App</h1>
       <footer>
         This project was coded by Eva Weymuller and is open source code on{" "}
-        <a href="https://github.com/eweymuller/react-scw4" target="_blank">
+        <a
+          href="https://github.com/eweymuller/react-scw4"
+          target="_blank"
+          rel="noreferrer"
+        >
           Github
         </a>
       </footer>
