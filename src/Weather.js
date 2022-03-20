@@ -5,10 +5,19 @@ export default function Weather() {
   return (
     <div classNameName="Weather">
       <div className="row">
-        <div className="col-6">
-          <p>Search City</p>
+        <div className="col-8">
+          <form>
+            <div className="col-6">
+              <input
+                type="search"
+                placeholder="Enter a city..."
+                className="form-control"
+              />
+            </div>
+            <input type="submit" value="search" className="btn btn-primary" />
+          </form>
         </div>
-        <div className="col-6">
+        <div className="col-2">
           <p>Imperial/Metric</p>
         </div>
       </div>
@@ -49,15 +58,21 @@ export default function Weather() {
           </div>
         </div>
 
-        <div className="col-5">
-          <ul>
-            <li>Wind</li>
-            <li>Humidity</li>
-            <li>Precipitation</li>
-          </ul>
+        <div className="col-4">
+          <div className="row">
+            <div className="col-8">Wind</div>
+            <div className="col-4">10kph</div>
+          </div>
+          <div className="row">
+            <div className="col-8">Humidity</div>
+            <div className="col-4">30%</div>
+          </div>
+          <div className="row">
+            <div className="col-8">Precipitation</div>
+            <div className="col-4">10%</div>
+          </div>
         </div>
       </div>
-      
     </div>
   );
 }
