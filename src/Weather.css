@@ -1,6 +1,50 @@
+.Weather {
+  font-family: "Bitter", serif;
+}
+.Weather,
+form {
+  margin-bottom: 20px;
+}
+Weather,
+.search-bar {
+  margin: 10px, 0;
+  font-size: 15px;
+  border: 1px solid rgba(129, 202, 215, 0.783);
+  border-radius: 3%;
+  box-shadow: 0 8px 8px 0 rgb(37 39 89 / 8%);
+}
+Weather,
+.button-default {
+  border: 1px solid rgba(129, 202, 215, 0.783);
+  background: transparent;
+  border-radius: 3px;
+  box-shadow: 0 8px 8px 0 rgb(37 39 89 / 8%);
+  color: rgb(41, 39, 39);
+}
+.Weather,
 ul {
   list-style: none;
 }
+.Weather,
 .icon {
   width: 100px;
+}
+.Weather,
+h1 {
+  font-size: 45px;
+  color: rgb(127, 177, 250);
+  text-transform: capitalize;
+}
+Weather,
+.unitConversion {
+  text-align: right;
+}
+Weather,
+.city {
+  font-size: 45px;
+  text-transform: capitalize;
+}
+Weather,
+.country {
+  text-align: right;
 }
