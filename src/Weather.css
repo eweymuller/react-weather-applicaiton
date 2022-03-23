@@ -2,6 +2,14 @@
   font-family: "Bitter", serif;
 }
 .Weather,
+.light {
+  color: rgb(29, 166, 212);
+}
+.Weather,
+.dark {
+  color: rgb(6, 19, 107);
+}
+.Weather,
 form {
   margin-bottom: 20px;
 }
@@ -15,11 +23,18 @@ Weather,
 }
 Weather,
 .button-default {
-  border: 1px solid rgba(129, 202, 215, 0.783);
+  border: 1px solid #a5e1fb;
   background: transparent;
   border-radius: 3px;
   box-shadow: 0 8px 8px 0 rgb(37 39 89 / 8%);
   color: rgb(41, 39, 39);
+  font-size: 15px;
+  padding: 1px 14px;
+  transition: all 0.3s ease-in-out;
+}
+.Weather,
+.button-default:hover {
+  background-color: #a5e1fb;
 }
 .Weather,
 ul {
@@ -47,4 +62,10 @@ Weather,
 Weather,
 .country {
   text-align: right;
+}
+.Weather,
+footer {
+  font-family: monospace;
+  font-size: 12px;
+  margin: 20px auto 0;
 }

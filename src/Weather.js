@@ -3,7 +3,7 @@ import "./Weather.css";
 
 export default function Weather() {
   return (
-    <div classNameName="Weather">
+    <div classNamName="Weather">
       <form>
         <div className="row">
           <div className="col-10">
@@ -22,7 +22,7 @@ export default function Weather() {
         </div>
       </form>
 
-      <div className="row">
+      <div className="row col-6">
         <h1 className="city">Chamonix</h1>
         <p className="country">France</p>
         <hr />
@@ -30,12 +30,12 @@ export default function Weather() {
       <div className="row">
         <div className="col-7">
           <div className="row">
-            <div className="col-3">Today</div>
-            <div className="col-3">High</div>
-            <div className="col-3">Low</div>
+            <div className="col-3 dark">Today</div>
+            <div className="col-3 dark">High</div>
+            <div className="col-3 dark">Low</div>
           </div>
           <div className="row">
-            <div className="col-3">--/--</div>
+            <div className="col-3 light">--/--</div>
             <div className="col-5"></div>
             <div className="col-2">
               <img
@@ -47,26 +47,43 @@ export default function Weather() {
           </div>
           <div className="row">
             <div className="col-3"></div>
-            <div className="col-3">--°C</div>
-            <div className="col-3">--°C</div>
+            <div className="col-3 light">
+              <h6 className="high-temp">
+                <span>--</span>°C
+              </h6>
+            </div>
+            <div className="col-3 light">
+              <h6 className="low-temp">
+                <span>--</span>°C
+              </h6>
+            </div>
           </div>
         </div>
+        <div className="col-2">
+          <div className="row dark">Wind</div>
+          <div className="row dark">Humidity</div>
+          <div className="row dark">Feels Like</div>
+        </div>
         <div className="col-1"></div>
-        <div className="col-4">
-          <div className="row">
-            <div className="col-8">Wind</div>
-            <div className="col-4">10kph</div>
+        <div className="col-2">
+          <div className="row light">
+            <h6 className="wind-value">
+              <span>--</span>kph
+            </h6>
           </div>
-          <div className="row">
-            <div className="col-8">Humidity</div>
-            <div className="col-4">30%</div>
+          <div className="row light">
+            <h6 className="humidity-value">
+              <span>--</span>%
+            </h6>
           </div>
-          <div className="row">
-            <div className="col-8">Precipitation</div>
-            <div className="col-4">10%</div>
+          <div className="row light">
+            <h6 className="feel-value">
+              <span>--</span>°C
+            </h6>
           </div>
         </div>
       </div>
+      <div className="card forecast"></div>
     </div>
   );
 }
