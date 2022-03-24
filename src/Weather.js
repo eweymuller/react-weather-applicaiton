@@ -3,7 +3,7 @@ import "./Weather.css";
 
 export default function Weather() {
   return (
-    <div classNamName="Weather">
+    <div className="Weather">
       <form>
         <div className="row">
           <div className="col-10">
