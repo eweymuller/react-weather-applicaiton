@@ -1,7 +1,11 @@
 import React from "react";
+import Axios from "axios";
 import "./Weather.css";
 
 export default function Weather() {
+  const apiKey = "7633347349ec94a368e4a15d93744b30";
+  let city = "paris";
+  let api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   return (
     <div classNamName="Weather">
       <form>
@@ -23,7 +27,7 @@ export default function Weather() {
       </form>
 
       <div className="row col-6">
-        <h1 className="city">Chamonix</h1>
+        <h1 className="city">{city}</h1>
         <p className="country">France</p>
         <hr />
       </div>
