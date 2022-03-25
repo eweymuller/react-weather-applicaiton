@@ -24,7 +24,7 @@ export default function Weather() {
 
       <div className="row col-6">
         <h1 className="city">Chamonix</h1>
-        <p className="country">France</p>
+        <p className="country dark">France</p>
         <hr />
       </div>
       <div className="row">

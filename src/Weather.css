@@ -1,3 +1,6 @@
+.Weather {
+  font-family: "Bitter", serif;
+}
 .Weather,
 .light {
   color: rgb(29, 166, 212);
@@ -49,6 +52,10 @@ Weather,
 Weather,
 .country {
   text-align: right;
+}
+.Weather,
+.icon {
+  
 }
 .Weather,
 footer {
