@@ -30,17 +30,19 @@ export default function Weather() {
       <div className="row">
         <div className="col-7">
           <div className="row">
-            <div className="col-3 dark">Today</div>
-            <div className="col-3 dark">High</div>
-            <div className="col-3 dark">Low</div>
+            <div className="col-3 dark title">Today </div>
+            <div className="col-3 dark title">High </div>
+            <div className="col-3 dark title">Low </div>
           </div>
           <div className="row">
-            <div className="col-3 light">--/--</div>
+            <div className="col-3 light">
+              <h6>--/--</h6>
+            </div>
             <div className="col-5"></div>
             <div className="col-2">
               <img
                 className="icon"
-                src="https://openweathermap.org/themes/openweathermap/assets/img/logo_white_cropped.png"
+                src="http://openweathermap.org/img/wn/02d@2x.png"
                 alt="Weather Icon"
               />
             </div>
@@ -60,9 +62,9 @@ export default function Weather() {
           </div>
         </div>
         <div className="col-2">
-          <div className="row dark">Wind</div>
-          <div className="row dark">Humidity</div>
-          <div className="row dark">Feels Like</div>
+          <div className="row dark title">Wind</div>
+          <div className="row dark title">Humidity</div>
+          <div className="row dark title">Feels Like</div>
         </div>
         <div className="col-1"></div>
         <div className="col-2">

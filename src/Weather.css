@@ -1,5 +1,21 @@
 .Weather {
   font-family: "Bitter", serif;
+  margin-top: 0px;
+}
+.Weather,
+h1 {
+  font-size: 45px;
+  color: rgb(127, 177, 250);
+  text-transform: capitalize;
+}
+Weather,
+.city {
+  font-size: 45px;
+  text-transform: capitalize;
+}
+Weather,
+.country {
+  text-align: right;
 }
 .Weather,
 .light {
@@ -32,34 +48,17 @@ Weather,
   padding: 1px 14px;
   transition: all 0.3s ease-in-out;
 }
+Weather,
+.button-default:hover {
+  border: 1px solid #6fb9d9;
+  background: #a5e1fb;
+}
+.Weather,
+.title {
+  font-size: 17px;
+}
 
 .Weather,
-ul {
-  list-style: none;
-}
-
-.Weather,
-h1 {
-  font-size: 45px;
-  color: rgb(127, 177, 250);
-  text-transform: capitalize;
-}
-Weather,
-.city {
-  font-size: 45px;
-  text-transform: capitalize;
-}
-Weather,
-.country {
-  text-align: right;
-}
-.Weather,
-.icon {
-  
-}
-.Weather,
-footer {
-  font-family: monospace;
-  font-size: 12px;
-  margin: 20px auto 0;
+h6 {
+  font-size: 13px;
 }
