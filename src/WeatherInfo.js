@@ -3,11 +3,10 @@ import FormattedDate from "./FormattedDate";
 import "./Weather.css";
 
 export default function WeatherInfo(props) {
-  console.log(props);
   return (
     <div className="WeatherInfo">
       <div className="row col-6">
-        <h1 className="city">Chamonix</h1>
+        <h1 className="city">{props.data.city}</h1>
         <p className="country dark">{props.data.country}</p>
         <hr />
       </div>
