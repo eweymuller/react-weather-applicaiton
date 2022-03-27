@@ -3,11 +3,12 @@ import FormattedDate from "./FormattedDate";
 import "./Weather.css";
 
 export default function WeatherInfo(props) {
+  console.log(props);
   return (
     <div className="WeatherInfo">
       <div className="row col-6">
         <h1 className="city">Chamonix</h1>
-        <p className="country dark"></p>
+        <p className="country dark">{props.data.country}</p>
         <hr />
       </div>
       <div className="row">
@@ -19,7 +20,9 @@ export default function WeatherInfo(props) {
           </div>
           <div className="row">
             <div className="col-3 light">
-              <h6></h6>
+              <h6>
+                <FormattedDate date={props.data.date} />
+              </h6>
             </div>
             <div className="col-5"></div>
             <div className="col-2">
@@ -34,12 +37,12 @@ export default function WeatherInfo(props) {
             <div className="col-3"></div>
             <div className="col-3 light">
               <h6>
-                <span></span>°C
+                <span>{Math.round(props.data.tempHigh)}</span>°C
               </h6>
             </div>
             <div className="col-3 light">
               <h6>
-                <span></span>°C
+                <span>{Math.round(props.data.tempLow)}</span>°C
               </h6>
             </div>
           </div>
@@ -53,17 +56,17 @@ export default function WeatherInfo(props) {
         <div className="col-2">
           <div className="row light">
             <h6>
-              <span></span>kph
+              <span>{Math.round(props.data.wind)}</span>kph
             </h6>
           </div>
           <div className="row light">
             <h6>
-              <span></span>%
+              <span>{props.data.humidity}</span>%
             </h6>
           </div>
           <div className="row light">
             <h6>
-              <span></span>°C
+              <span>{Math.round(props.data.feel)}</span>°C
             </h6>
           </div>
         </div>
