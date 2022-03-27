@@ -3,12 +3,23 @@ import axios from "axios";
 import "./Weather.css";
 
 export default function Weather() {
-  const [weatherdata, setWeatherData] = useState({ ready: false });
+  const [weatherData, setWeatherData] = useState({ ready: false });
   function handleResponse(response) {
     console.log(response);
-    setWeatherData({});
+    setWeatherData({
+      ready: true,
+      wind: response.data.wind.speed,
+      humidity: response.data.main.humidity,
+      feel: response.data.main.feels_like,
+      tempHigh: response.data.main.temp_max,
+      tempLow: response.data.main.temp_min,
+      country: response.data.sys.country,
+      description: response.data.weather[0].description,
+      icon: response.data.weather[0].icon,
+      iconUrl: "http://openweathermap.org/img/wn/03d@2x.png",
+    });
   }
-  if (weatherdata.ready) {
+  if (weatherData.ready) {
     return (
       <div className="Weather">
         <form>
@@ -49,7 +60,7 @@ export default function Weather() {
               <div className="col-2">
                 <img
                   className="icon"
-                  src="http://openweathermap.org/img/wn/02d@2x.png"
+                  src="http://openweathermap.org/img/wn/03d@2x.png"
                   alt="Weather Icon"
                 />
               </div>
@@ -57,13 +68,13 @@ export default function Weather() {
             <div className="row">
               <div className="col-3"></div>
               <div className="col-3 light">
-                <h6 className="high-temp">
-                  <span>11</span>°C
+                <h6>
+                  <span>{Math.round(weatherData.tempHigh)}</span>°C
                 </h6>
               </div>
               <div className="col-3 light">
-                <h6 className="low-temp">
-                  <span>10</span>°C
+                <h6>
+                  <span>{Math.round(weatherData.tempLow)}</span>°C
                 </h6>
               </div>
             </div>
@@ -76,18 +87,18 @@ export default function Weather() {
           <div className="col-1"></div>
           <div className="col-2">
             <div className="row light">
-              <h6 className="wind-value">
-                <span>20</span>kph
+              <h6>
+                <span>{Math.round(weatherData.wind)}</span>kph
               </h6>
             </div>
             <div className="row light">
-              <h6 className="humidity-value">
-                <span>17</span>%
+              <h6>
+                <span>{Math.round(weatherData.humidity)}</span>%
               </h6>
             </div>
             <div className="row light">
-              <h6 className="feel-value">
-                <span>9</span>°C
+              <h6>
+                <span>{Math.round(weatherData.feel)}</span>°C
               </h6>
             </div>
           </div>
@@ -96,8 +107,8 @@ export default function Weather() {
       </div>
     );
   } else {
-    const apiKey = "7633347349ec94a368e4a15d93744b30";
-    let city = "Chamonix";
+    const apiKey = "baf60817c8949f7c45446dcf8e9fa9aa";
+    let city = "chamonix";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
     return "Loading...";
