@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import axios from "axios";
+import FormattedDate from "./FormattedDate";
 import "./Weather.css";
 
 export default function Weather() {
   const [weatherData, setWeatherData] = useState({ ready: false });
   function handleResponse(response) {
-    console.log(response);
     setWeatherData({
       ready: true,
       wind: response.data.wind.speed,
@@ -17,6 +17,7 @@ export default function Weather() {
       description: response.data.weather[0].description,
       icon: response.data.weather[0].icon,
       iconUrl: "http://openweathermap.org/img/wn/03d@2x.png",
+      date: new Date(response.data.dt * 1000),
     });
   }
   if (weatherData.ready) {
@@ -42,7 +43,7 @@ export default function Weather() {
 
         <div className="row col-6">
           <h1 className="city">Chamonix</h1>
-          <p className="country dark">France</p>
+          <p className="country dark">{weatherData.country}</p>
           <hr />
         </div>
         <div className="row">
@@ -54,7 +55,9 @@ export default function Weather() {
             </div>
             <div className="row">
               <div className="col-3 light">
-                <h6>03/25</h6>
+                <h6>
+                  <FormattedDate date={weatherData.date} />
+                </h6>
               </div>
               <div className="col-5"></div>
               <div className="col-2">
