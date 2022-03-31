@@ -1,46 +1,37 @@
 import React from "react";
-import { WiNightClear } from "weather-icons-react";
-import { WiNightAltCloudy } from "weather-icons-react";
-import { WiCloud } from "weather-icons-react";
-import { WiCloudy } from "weather-icons-react";
-import { WiNightAltRain } from "weather-icons-react";
-import { WiNightAltShowers } from "weather-icons-react";
-import { WiNightAltSnowThunderstorm } from "weather-icons-react";
-import { WiNightAltSnow } from "weather-icons-react";
-import { WiFog } from "weather-icons-react";
-import { WiDaySunny } from "weather-icons-react";
-import { WiDayRain } from "weather-icons-react";
-import { WiDayShowers } from "weather-icons-react";
-import { WiDayStormShowers } from "weather-icons-react";
-import { WiDaySnow } from "weather-icons-react";
-import { WiDaySnow } from "weather-icons-react";
+import ReactAnimatedWeather from "react-animated-weather";
 
 export default function WeatherIcon(props) {
   console.log(props.code);
   const codeMapping = {
-    "01n": "WiNightClear",
-    "02n": "WiNightAltCloudy",
-    "03n": "WiCloud",
-    "04n": "WiCloudy",
-    "09n": "WiNightAltRain",
-    "10n": "WiNightAltShowers",
-    "11n": "WiNightAltSnowThunderstorm",
-    "13n": "WiNightAltSnow",
-    "50n": "WiFog",
+    "01n": "CLEAR_NIGHT",
+    "02n": "PARTLY_CLOUDY_NIGHT",
+    "03n": "CLOUDY",
+    "04n": "CLOUDY",
+    "09n": "RAIN",
+    "10n": "RAIN",
+    "11n": "RAIN",
+    "13n": "SNOW",
+    "50n": "FOG",
 
-    "01d": "WiDaySunny",
-    "02d": "WiDayCloudy",
-    "03d": "WiCloud",
-    "04d": "WiCloudy",
-    "09d": "WiDayRain",
-    "10d": "WiDayShowers",
-    "11d": "WiDayStormShowers",
-    "13d": "WiDaySnow",
-    "50d": "WiFog",
+    "01d": "CLEAR_DAY",
+    "02d": "PARTLY_CLOUDY_DAY",
+    "03d": "CLOUDY",
+    "04d": "CLOUDY",
+    "09d": "RAIN",
+    "10d": "RAIN",
+    "11d": "RAIN",
+    "13d": "SNOW",
+    "50d": "FOG",
   };
+
   return (
     <div>
-      <WiDaySnow icon={codeMapping[props.code]} />
+      <ReactAnimatedWeather
+        icon={codeMapping[props.code]}
+        size={34}
+        animate="true"
+      />
     </div>
   );
 }
