@@ -40,5 +40,5 @@ export default function WeatherIcon(props) {
     "50d": "WiFog"
   }
   return <div>
-Hi  </div>;
+Test  </div>;
 }
