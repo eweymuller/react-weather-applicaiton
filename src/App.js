@@ -9,7 +9,7 @@ function App() {
         <footer>
           This project was coded by Eva Weymuller and is open source code on{" "}
           <a
-            href="https://github.com/eweymuller/react-scw4"
+            href="https://github.com/eweymuller/react-weather-applicaiton"
             target="_blank"
             rel="noreferrer"
           >

@@ -62,3 +62,6 @@ Weather,
 h6 {
   font-size: 13px;
 }
+canvas {
+  text-align: center;
+}

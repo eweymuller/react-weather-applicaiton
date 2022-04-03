@@ -4,8 +4,7 @@ import WeatherIcon from "./WeatherIcon";
 import "./Weather.css";
 
 export default function WeatherInfo(props) {
-
-  
+  console.log(props.data);
   return (
     <div className="WeatherInfo">
       <div className="row col-6">
@@ -17,8 +16,8 @@ export default function WeatherInfo(props) {
         <div className="col-7">
           <div className="row">
             <div className="col-3 dark title">Today</div>
-            <div className="col-3 dark title">High</div>
             <div className="col-3 dark title">Low</div>
+            <div className="col-3 dark title">High</div>
           </div>
           <div className="row">
             <div className="col-3 light">
@@ -31,7 +30,7 @@ export default function WeatherInfo(props) {
               <WeatherIcon
                 code={props.data.icon}
                 alt={props.data.description}
-                class="#303043"
+                size={70}
               />
             </div>
           </div>
@@ -39,12 +38,12 @@ export default function WeatherInfo(props) {
             <div className="col-3"></div>
             <div className="col-3 light">
               <h6>
-                <span>{Math.round(props.data.tempHigh)}</span>°C
+                <span>{Math.round(props.data.tempLow)}</span>°C
               </h6>
             </div>
             <div className="col-3 light">
               <h6>
-                <span>{Math.round(props.data.tempLow)}</span>°C
+                <span>{Math.round(props.data.tempHigh)}</span>°C
               </h6>
             </div>
           </div>
