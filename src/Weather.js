@@ -7,6 +7,8 @@ import "./Weather.css";
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
+  const [unitCelsius, setUnitCelsius] = useState(true);
+
   function handleResponse(response) {
     setWeatherData({
       ready: true,
@@ -37,6 +39,10 @@ export default function Weather(props) {
   function handleCityChange(event) {
     setCity(event.target.value);
   }
+  function updateUnit(event) {
+    event.preventDefault();
+    setUnitCelsius(!unitCelsius);
+  }
 
   if (weatherData.ready) {
     return (
@@ -53,7 +59,15 @@ export default function Weather(props) {
               <input type="submit" value="search" className="button-default" />
             </div>
             <div className="col-2">
-              <button className="button-default">Imperial/metric</button>
+              {unitCelsius ? (
+                <button className="button-default" onClick={updateUnit}>
+                  Imperial
+                </button>
+              ) : (
+                <button className="button-default" onClick={updateUnit}>
+                  Metric
+                </button>
+              )}
             </div>
           </div>
         </form>
