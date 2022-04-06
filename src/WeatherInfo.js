@@ -4,8 +4,6 @@ import WeatherIcon from "./WeatherIcon";
 import "./Weather.css";
 
 export default function WeatherInfo(props) {
-  console.log(props.data);
-
   if (props.unitCelcius) {
     return (
       <div className="WeatherInfo">
