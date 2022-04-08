@@ -76,6 +76,7 @@ export default function Weather(props) {
         <WeatherForecast coordinates={weatherData.coordinates} />
       </div>
     );
+    
   } else {
     search();
     return (
