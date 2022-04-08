@@ -11,6 +11,7 @@ export default function WeatherForecast(props) {
     console.log(response.data.daily[0]);
     setforecast(response.data.daily);
     console.log(response.data.daily[0].temp.min);
+    console.log(response.data.daily[0].dt);
     setLoaded(true);
   }
 
@@ -19,16 +20,16 @@ export default function WeatherForecast(props) {
       <div className="WeatherForecast">
         <div className="row">
           <div className="col">
-            <div className="WeatherForecast-day">{forecast[0].dt * 1000}</div>
+            <div className="WeatherForecast-day">{forecast[0].dt}</div>
           </div>
           <div className="col WeatherForecast-temperatures">
             <span className="WeatherForecast-min">
-              {Math.round(forecast[0].temp.min)}°C
+              {forecast[0].temp.min}°C
             </span>
           </div>
           <div className="col WeatherForecast-temperatures">
             <span className="WeatherForecast-max">
-              {Math.round(forecast[0].temp.max)}°C
+              {forecast[0].temp.max}°C
             </span>
           </div>
           <div className="col">
