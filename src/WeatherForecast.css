@@ -5,8 +5,11 @@
 }
 .WeatherForecast-day {
   color: rgb(6, 19, 107);
+  font-size: 16px;
 }
 .WeatherForecast-max {
-  opacity: 0.8;
-  margin-left: 5px;
+  color: rgb(29, 166, 212);
+}
+.WeatherForecast-min {
+  color: rgb(29, 166, 212);
 }
